@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BonjourController {
+    private static int greetingsCount = 0;
+
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index() {
@@ -25,6 +27,7 @@ public class BonjourController {
             return "Greeting not found";
         }
 
-        return greeting + " " + name;
+        ++greetingsCount;
+        return greeting + " " + name + " (greeted " + greetingsCount + " times)";
     }
 }
