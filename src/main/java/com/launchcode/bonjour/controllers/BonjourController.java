@@ -1,7 +1,7 @@
 package com.launchcode.bonjour.controllers;
 
 import com.launchcode.bonjour.utils.CountCookieUtil;
-import models.Bonjour;
+import com.launchcode.bonjour.models.Bonjour;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class BonjourController {
-
     @ResponseBody
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index() {

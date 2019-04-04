@@ -1,4 +1,4 @@
-package models;
+package com.launchcode.bonjour.models;
 
 import java.util.HashMap;
 
